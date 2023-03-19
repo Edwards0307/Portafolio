@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./img/edwards.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- Para enviar correos -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("aNZb5pta1uvQsES2q");
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm("contact_service", "contact_form", this).then(
+              function () {
+                console.log("SUCCESS!");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+
+    <title>Edwards Alexis Ardila Martinez</title>
+  </head>
+  <body>
+    <!-- Menú encabezado -->
+    <div class="contenedor-header">
+      <header>
+        <div class="logo">
+          <a href="#">Edwards</a>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+            <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+            <li><a href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
+            <li>
+              <a href="#curriculum" onclick="seleccionar()">CURRICULUM</a>
+            </li>
+            <li><a href="#portfolio" onclick="seleccionar()">PROYECTOS</a></li>
+            <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+          </ul>
+        </nav>
+        <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+    </div>
+
+    <!-- Inicio -->
+    <section id="inicio" class="inicio">
+      <div class="contenido-banner">
+        <div class="contenedor-img">
+          <img src="img/edwards.jpg" alt="img" />
+        </div>
+        <h1>Edwards Alexis Ardila Martinez</h1>
+        <h2>Full Stack Web Developer</h2>
+        <div class="redes">
+          <a href="https://www.facebook.com/profile.php?id=100077125203507"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://twitter.com/edwards_ardila"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://api.whatsapp.com/send?phone=573188731800&text=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BBGracias%20por%20tu%20inter%C3%A9s%20en%20contactarme%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/edwards-alexis-ardila-martinez-042980149/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/Edwards0307"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre mi -->
+    <section id="sobremi" class="sobremi">
+      <div class="contenido-seccion">
+        <h2>Sobre Mí</h2>
+        <p>
+          Hola mi nombre es <span>Edwards Ardila,</span> Soy un ingeniero de
+          sistemas y desarrollador web Full Stack junior egresado del Bootcamp
+          Henry, y estoy emocionado de llevar mi pasión por la tecnología y
+          habilidades sólidas para resolver problemas al campo del desarrollo
+          web. Siempre estoy buscando nuevos desafíos y oportunidades para
+          expandir mis conocimientos y habilidades. Soy un aprendiz rápido y un
+          autodidacta que siempre está ansioso por asumir nuevos proyectos y
+          desafíos.
+          <br />
+          Trabajo con una variedad de tecnologías en el desarrollo web,
+          incluyendo lenguajes como JavaScript y SQL. En el Front-End, tengo
+          experiencia con React, Redux, Redux Toolkit, Hooks, React-Router,
+          Bootstrap, CSS y más. En el Back-End, he trabajado con Node.js y
+          Express, y en cuanto a bases de datos, tengo experiencia con
+          Sequelize, PostgreSQL, SQLite, MySQL y más. También tengo experiencia
+          con herramientas como GitHub, Postman, Trello, Slack, Visual Studio,
+          Vercel y Firebase. Estoy interesado en adquirir nuevas experiencias en
+          el mundo de la tecnología y seguir aprendiendo para visualizar otras
+          realidades y seguir trabajando en proyectos que involucren motivos y
+          causas reales.
+        </p>
+
+        <div class="fila">
+          <!-- datos personales -->
+          <div class="col">
+            <h3>Datos Personales</h3>
+            <ul>
+              <li>
+                <strong>Teléfono</strong>
+                +573188731800
+              </li>
+              <li>
+                <strong>Email</strong>
+                edwards.ardila03@gmail.com
+              </li>
+              <li>
+                <strong>Ciudad</strong>
+                Cali
+              </li>
+              <li>
+                <strong>País</strong>
+                Colombia
+              </li>
+              <li>
+                <strong>Idioma</strong>
+                Español - Nativo / Ingles - Basico
+              </li>
+              <li>
+                <strong>Cargo</strong>
+                <span>Freelance</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- intereses -->
+          <div class="col">
+            <h3>Intereses</h3>
+            <div class="contenedor-intereses">
+              <div class="interes">
+                <i class="fa-solid fa-book"></i>
+                <span>ESTUDIOS</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-headphones"></i>
+                <span>MÚSICA</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-plane"></i>
+                <span>VIAJES</span>
+              </div>
+              <div class="interes">
+                <i class="fa fa-cutlery"></i>
+                <span>COMIDA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a download="Doc Pdf" href="./docs/pdf/CV-EdwardsArdila.pdf">
+          Descargar CV <i class="fa-sharp fa-solid fa-download"></i>
+          <span class="overlay"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+      <div class="contenido-seccion">
+        <h2>Habilidades</h2>
+        <div class="fila">
+          <!-- Technical skill -->
+          <div class="col">
+            <h3>Habilidades Técnicas</h3>
+
+            <div class="skill">
+              <span>Html & Css</span>
+            </div>
+
+            <div class="skill">
+              <span>JavaScript</span>
+            </div>
+
+            <div class="skill">
+              <span>React & Redux</span>
+            </div>
+
+            <div class="skill">
+              <span>NodeJs</span>
+            </div>
+
+            <div class="skill">
+              <span>SQL</span>
+            </div>
+          </div>
+
+          <!-- Professional skill -->
+          <div class="col">
+            <h3>Habilidades Profesionales</h3>
+
+            <div class="skill">
+              <span>Adaptación</span>
+            </div>
+
+            <div class="skill">
+              <span>Comunicación</span>
+            </div>
+
+            <div class="skill">
+              <span>Trabajo en equipo</span>
+            </div>
+
+            <div class="skill">
+              <span>Dedicación</span>
+            </div>
+
+            <div class="skill">
+              <span>Colaboración</span>
+            </div>
+
+            <div class="skill">
+              <span>Creatividad</span>
+            </div>
+
+            <div class="skill">
+              <span>Sentido de pertenencia</span>
+            </div>
+
+            <div class="skill">
+              <span>Humildad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Currículum -->
+    <section id="curriculum" class="curriculum">
+      <div class="contenido-section">
+        <h2>Curriculum</h2>
+        <div class="fila">
+          <div class="col izquierda">
+            <h3>Educación</h3>
+            <div class="item izq">
+              <h4>Full Stack Web Developer</h4>
+              <span class="casa">Henry Academi</span>
+              <span class="fecha">2022 - 2023</span>
+              <ul>
+                <li>Desarrollo ágil metodología SCRUM</li>
+                <li>Entendimiento de arquitectura cliente-servidor</li>
+                <li>
+                  Conocimientos y aplicación en principios de código limpio
+                </li>
+                <li>Manejo de control de versiones y repositorios remotos</li>
+                <li>Creación y consumo de servicios REST</li>
+                <li>Manejo de bases de datos PostgreSQL, Sequelize, MySQL</li>
+              </ul>
+              <div class="conectori">
+                <div class="circuloi"></div>
+              </div>
+            </div>
+
+            <div class="item izq">
+              <h4>Administrador Público</h4>
+              <span class="casa">Universidad de Cartagena</span>
+              <span class="fecha">2012 - 2018</span>
+              <ul>
+                <li>Responsabilidad Y adaptabilidad</li>
+                <li>Disposición para el uso y manejo de equipo y tecnología</li>
+                <li>Responsabilidad para alcanzar el bienestar común</li>
+                <li>Trabajo en equipo</li>
+                <li>Integridad y honestidad</li>
+                <li>
+                  Normas de conducta, principios y ética en la práctica
+                  profesional
+                </li>
+              </ul>
+              <div class="conectori">
+                <div class="circuloi"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col derecha">
+            <h3>Experiencia</h3>
+            <div class="item der">
+              <h4>Full Stack Web Developer</h4>
+              <span class="casa">Henry Academi</span>
+              <span class="fecha">2022 - 2023</span>
+              <p>
+                Funciones: Diseñar y desasrrollar Apps las cuales incluyen
+                sistemas de busqueda, filtrados, formularios, administracion de
+                usuarios, y roles entre otras funcionalidades; Donde en el lado
+                del Front-End utilizo tecnologías como React, Redux, Css puro y
+                por el lado del Back-End utilizo NodeJs con Express, base de
+                datos en PostgreSQL, Sequelize y uso de metodologías ágiles
+                SCRUM
+              </p>
+              <div class="conectord">
+                <div class="circulod"></div>
+              </div>
+            </div>
+
+            <div class="item der">
+              <h4>Recepcionista</h4>
+              <span class="casa">Hotel Firenze de Magangué</span>
+              <span class="fecha">2022 - 2023</span>
+              <p>
+                Funciones: Crear un ambiente acogedor, recibiendo, informando y
+                guiando a los visitantes, empleados y proveedores de manera
+                cordial, amigable y profesional; Realizar check-in y check-out
+                de los huéspedes. Atender llamadas telefónicas con el fin de
+                gestionar solicitudes de reservas o cancelaciones, ejecutar
+                auditoria en horario nocturno y hacer cierre de caja cuando sea
+                requerido
+              </p>
+              <div class="conectord">
+                <div class="circulod"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Proyectos -->
+    <section id="portfolio" class="portfolio">
+      <div class="contenido-seccion">
+        <h2>Proyectos</h2>
+        <div class="galeria">
+          <div class="proyecto">
+            <a href="https://app-image-gallery-f1.vercel.app/" target="_blank">
+              <img src="img/App_Image_Gallery_F1.png" alt="" />
+              <div class="overlay">
+                <h3>Gallería de imágenes F1 2023</h3>
+                <p>Html, Css & Js</p>
+                <p>Demo</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="proyecto">
+            <a href="https://app-clima-dzyb.vercel.app/" target="_blank">
+              <img src="img/App_climas.png" alt="#" />
+              <div class="overlay">
+                <h3>App Clima</h3>
+                <p>React</p>
+                <p>Demo</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="proyecto">
+            <a href="https://paises-app-pi.vercel.app/" target="_blank">
+              <img src="img/Paises_App.png" alt="#" />
+              <div class="overlay">
+                <h3>Paises App</h3>
+                <p>Angular</p>
+                <p>Demo</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+      <div class="contenido-seccion">
+        <h2>Contacto</h2>
+        <div class="fila">
+          <div class="col">
+            <form id="contact-form">
+              <input type="hidden" name="contact_number" />
+              <label>Name</label>
+              <input type="text" name="user_name" />
+              <label>Email</label>
+              <input type="email" name="user_email" />
+              <label>Message</label>
+              <textarea name="message"></textarea>
+              <input type="submit" value="Send" />
+            </form>
+          </div>
+
+          <!-- Mapa -->
+          <div class="col">
+            <img src="img/ubicacion.png" alt="" />
+            <div class="info">
+              <ul>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  Cali - Colombia
+                </li>
+                <li>
+                  <i class="fa-solid fa-mobile-screen"></i>
+                  Llamame al: +573188731800
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope"></i>
+                  Email: edwards.ardila03@gmail.com
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <a href="#inicio" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+      </a>
+      <div class="redes">
+        <a href="https://www.facebook.com/asdrubal.mejialopez"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com/AsdrubalMejia"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a href="https://bit.ly/Asdrumejia1992"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/asdrubal-mejia-lopez/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/Asdrumejia"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>

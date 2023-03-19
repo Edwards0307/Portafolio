@@ -1,0 +1,885 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrainsMono&family=Work+Sans:wght@100;300;400;600;800&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "JetBrains Mono";
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /*Me permite deslizar cuando hago click en los links del menú*/
+  scroll-behavior: smooth;
+}
+
+/* Menú encabezado */
+.contenedor-header {
+  background: #1a2527;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.contenedor-header header {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+.contenedor-header header .logo a {
+  font-family: "JetBrains Mono";
+  font-size: 35px;
+  color: #4c9eb0;
+  text-decoration: none;
+}
+.contenedor-header header ul {
+  display: flex;
+  list-style: none;
+}
+.contenedor-header header nav ul li a {
+  text-align: none;
+  color: #ffff;
+  margin: 0 15px;
+  padding: 3px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover {
+  color: #4c9eb0;
+}
+.nav-responsive {
+  background-color: #4c9eb0;
+  color: #ffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Inicio */
+.inicio {
+  background: linear-gradient(
+      to top,
+      rgba(30, 35, 38, 0.8),
+      rgba(30, 35, 38, 1)
+    ),
+    url(img/computadoras.jpg);
+  background-size: cover;
+  height: 100vh;
+  color: #ffff;
+  display: flex;
+  align-items: center;
+}
+.inicio .contenido-banner {
+  padding: 20px;
+  background-color: #1a2527;
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+  border: 0.5px solid #4c9eb0;
+  border-radius: 40px;
+}
+.inicio .contenido-banner img {
+  margin-top: 40px;
+  border: 10px solid #4c9eb0;
+  display: block;
+  width: 70%;
+  margin: auto;
+  border-radius: 100%;
+}
+.inicio .contenido-banner h1 {
+  margin-top: 40px;
+  font-size: 42px;
+  font-family: "JetBrains Mono";
+}
+.inicio .contenido-banner h2 {
+  font-size: 15px;
+  font-weight: normal;
+}
+.inicio .contenido-banner .redes a {
+  color: #ffff;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #ffff;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 40px 5px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.inicio .contenido-banner .redes a:hover {
+  background-color: #4c9eb0;
+}
+
+/* Sobre mí */
+.sobremi {
+  background-color: #1a2527;
+  color: #ffff;
+  padding: 50px 20px;
+}
+.sobremi .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+.sobremi h2 {
+  font-size: 48px;
+  font-family: "Righteous";
+  text-align: center;
+  padding: 20px 0;
+}
+.sobremi .contenido-seccion p {
+  text-align: justify;
+  font-size: 17px;
+  line-height: 22px;
+  margin-bottom: 25px;
+}
+.sobremi .contenido-seccion p span {
+  color: #4c9eb0;
+  font-weight: bold;
+}
+.sobremi .fila {
+  display: flex;
+}
+.sobremi .fila .col {
+  width: 50%;
+}
+.sobremi .fila .col h3 {
+  font-size: 30px;
+  font-family: "JetBrains Mono";
+  margin-bottom: 25px;
+}
+.sobremi .fila .col ul {
+  list-style: none;
+}
+.sobremi .fila .col ul li {
+  margin: 12px 0;
+}
+.sobremi .fila .col ul li strong {
+  display: inline-block;
+  color: #4c9eb0;
+  width: 130px;
+}
+.sobremi .fila .col ul li span {
+  background-color: #4c9eb0;
+  padding: 3px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.sobremi .fila .col .contenedor-intereses {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereses .interes {
+  width: 100px;
+  height: 100px;
+  background-color: #1a2527;
+  border-radius: 10px;
+  margin: 0 15px 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.sobremi .fila .col .contenedor-intereses .interes:hover {
+  background-color: #4c9eb0;
+}
+.sobremi .fila .col .contenedor-intereses .interes i {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.sobremi button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #4c9eb0;
+  width: fit-content;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 22px;
+  font-size: 16px;
+  color: #ffff;
+  position: relative;
+  z-index: 10;
+}
+.sobremi button .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #4c9eb0;
+  z-index: -1;
+  transition: 1s;
+}
+.sobremi button:hover .overlay {
+  width: 100%;
+}
+.sobremi a {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #ffff;
+  width: fit-content;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 22px;
+  font-size: 16px;
+  color: #ffff;
+  position: relative;
+  z-index: 10;
+}
+.sobremi a .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #4c9eb0;
+  z-index: -1;
+  transition: 1s;
+}
+.sobremi a:hover .overlay {
+  width: 100%;
+}
+
+/* Skills */
+.skills {
+  background-color: #233337;
+  color: #ffff;
+  padding: 50px 20px;
+}
+.skills .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+.skills h2 {
+  font-size: 48px;
+  font-family: "JetBrains Mono";
+  text-align: center;
+  padding: 20px 0;
+}
+.skills .fila {
+  display: flex;
+}
+.skills .fila .col {
+  width: 50%;
+  padding: 0 20px;
+}
+.skills .fila .col h3 {
+  font-size: 28px;
+  font-family: "JetBrains Mono";
+  margin-bottom: 25px;
+}
+.skills .skill > span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+.skills .skill .barra-skill {
+  height: 8px;
+  width: 80%;
+  background-color: #000000;
+  position: relative;
+  margin-bottom: 30px;
+}
+.skills .skill .progreso {
+  background-color: #4c9eb0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+}
+.skills .skill .barra-skill span {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #4c9eb0;
+  border-radius: 50px;
+  line-height: 40px;
+  text-align: center;
+  top: -17px;
+  right: -15px;
+  font-size: 14px;
+}
+/* Estas clases se agregaran dinamicamente mediante javascript */
+.skills .skill .htmlcss {
+  width: 0%;
+  animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+.skills .skill .javascript {
+  width: 0%;
+  animation: 2s javascript forwards;
+}
+@keyframes javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+.skills .skill .typescript {
+  width: 0%;
+  animation: 2s typescript forwards;
+}
+@keyframes typescript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+.skills .skill .react {
+  width: 0%;
+  animation: 2s react forwards;
+}
+@keyframes react {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+.skills .skill .angular {
+  width: 0%;
+  animation: 2s angular forwards;
+}
+@keyframes angular {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+.skills .skill .nodeJs {
+  width: 0%;
+  animation: 2s nodeJs forwards;
+}
+@keyframes nodeJs {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+.skills .skill .postgreSQL {
+  width: 0%;
+  animation: 2s postgreSQL forwards;
+}
+@keyframes postgreSQL {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+.skills .skill .mongoDb {
+  width: 0%;
+  animation: 2s mongoDb forwards;
+}
+@keyframes mongoDb {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+.skills .skill .adaptacion {
+  width: 0%;
+  animation: 2s adaptacion forwards;
+}
+@keyframes adaptacion {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.skills .skill .comunicacion {
+  width: 0%;
+  animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+.skills .skill .trabajoEnEquipo {
+  width: 0%;
+  animation: 2s trabajoEnEquipo forwards;
+}
+@keyframes trabajoEnEquipo {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+.skills .skill .dedicacion {
+  width: 0%;
+  animation: 2s dedicacion forwards;
+}
+@keyframes dedicacion {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.skills .skill .colaboracion {
+  width: 0%;
+  animation: 2s colaboracion forwards;
+}
+@keyframes colaboracion {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.skills .skill .creatividad {
+  width: 0%;
+  animation: 2s creatividad forwards;
+}
+@keyframes creatividad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+.skills .skill .sentidoDePertenencia {
+  width: 0%;
+  animation: 2s sentidoDePertenencia forwards;
+}
+@keyframes sentidoDePertenencia {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.skills .skill .humildad {
+  width: 0%;
+  animation: 2s humildad forwards;
+}
+@keyframes humildad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Currículum */
+.curriculum {
+  background-color: #1a2527;
+  color: #ffff;
+  padding: 50px 20px;
+}
+.curriculum .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+.curriculum h2 {
+  font-size: 48px;
+  font-family: "JetBrains Mono";
+  text-align: center;
+  padding: 20px 0;
+}
+.curriculum .fila {
+  display: flex;
+  justify-content: space-between;
+}
+.curriculum .fila .col {
+  width: 49%;
+  padding: 0 20px;
+}
+.curriculum .fila .col h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-family: "JetBrains Mono";
+  margin-bottom: 25px;
+}
+.curriculum .fila .izquierda {
+  border-right: 2px solid #233337;
+}
+.curriculum .fila .derecha {
+  border-left: 2px solid #233337;
+}
+.curriculum .fila .item {
+  padding: 25px;
+  margin-bottom: 30px;
+  background-color: #233337;
+  position: relative;
+}
+.curriculum .fila .item h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.curriculum .fila .item .casa {
+  color: #4c9eb0;
+  font-size: 22px;
+  font-weight: bold;
+  display: block;
+}
+.curriculum .fila .item .fecha {
+  display: block;
+  color: #4c9eb0;
+  margin-bottom: 10px;
+}
+.curriculum .fila .item {
+  text-align: justify;
+  line-height: 25px;
+}
+.curriculum .fila .izq {
+  border-right: 2px solid #4c9eb0;
+  margin-right: 20px;
+}
+.curriculum .fila .der {
+  border-left: 2px solid #4c9eb0;
+  margin-left: 20px;
+}
+.curriculum .fila .item .conectori {
+  height: 2px;
+  background-color: #4c9eb0;
+  width: 47px;
+  position: absolute;
+  top: 50%;
+  right: -47px;
+  z-index: 5;
+}
+.curriculum .fila .item .conectori .circuloi {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #4c9eb0;
+  float: right;
+  position: relative;
+  bottom: 4px;
+}
+.curriculum .fila .item .conectord {
+  height: 2px;
+  background-color: #4c9eb0;
+  width: 47px;
+  position: absolute;
+  top: 50%;
+  left: -47px;
+  z-index: 5;
+}
+.curriculum .fila .item .conectord .circulod {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #4c9eb0;
+  float: left;
+  position: relative;
+  bottom: 4px;
+}
+
+/* Proyectos */
+.portfolio {
+  background-color: #233337;
+  color: #ffff;
+  padding: 50px 20px;
+}
+.portfolio .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+.portfolio h2 {
+  font-size: 48px;
+  font-family: "JetBrains Mono";
+  text-align: center;
+  padding: 20px 0;
+}
+.portfolio .galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.portfolio .galeria .proyecto {
+  position: relative;
+  max-width: 340px;
+  height: fit-content;
+  margin: 10px;
+  cursor: pointer;
+}
+.portfolio .galeria .proyecto a {
+  font-family: "JetBrains Mono";
+  text-decoration: none;
+  color: #ffff;
+}
+.portfolio .galeria .proyecto img {
+  width: 100%;
+  display: block;
+}
+.portfolio .galeria .proyecto .overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(40, 115, 130, 0.8), rgba(40, 115, 130, 0.8));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 1s;
+  font-size: 18px;
+  letter-spacing: 3px;
+  opacity: 0;
+}
+.portfolio .galeria .proyecto .overlay h3 {
+  margin-bottom: 20px;
+  transition: 1s;
+}
+.portfolio .galeria .proyecto .overlay:hover {
+  opacity: 1;
+}
+.portfolio .galeria .proyecto .overlay:hover h3 {
+  margin-bottom: 0px;
+}
+
+/* Contacto */
+.contacto {
+  background-image: url(img/contacto.png);
+  background-color: #1a2527;
+  color: #ffff;
+  padding: 50px 0;
+}
+.contacto .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+.contacto h2 {
+  font-size: 48px;
+  font-family: "JetBrains Mono";
+  text-align: center;
+  padding: 20px 0;
+}
+.contacto .fila {
+  display: flex;
+}
+.contacto .col {
+  width: 50%;
+  padding: 10px;
+  position: relative;
+}
+.contacto .col input,
+.contacto .col textarea {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #233337;
+  color: #ffff;
+  font-size: 18px;
+}
+.contacto button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #ffff;
+  width: fit-content;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 22px;
+  font-size: 16px;
+  color: #ffff;
+  position: relative;
+  z-index: 10;
+}
+.contacto button .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #4c9eb0;
+  z-index: -1;
+  transition: 1s;
+}
+.contacto button:hover .overlay {
+  width: 100%;
+}
+.contacto .col img {
+  width: 100%;
+  height: 86%;
+}
+.contacto .col .info {
+  position: absolute;
+  top: 40%;
+  background-color: #1a2527;
+  padding: 20px;
+  max-width: 350px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contacto .col .info ul {
+  list-style: none;
+}
+.contacto .col .info ul li {
+  margin-bottom: 20px;
+}
+.contacto .col .info ul li i {
+  color: #4c9eb0;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #233337;
+  color: #ffff;
+  padding: 50px 0 30px 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+footer .redes {
+  margin-bottom: 20px;
+}
+footer .redes a {
+  color: #ffff;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #ffff;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 40px 5px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+footer .redes a:hover {
+  background-color: #4c9eb0;
+}
+footer .arriba {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #4c9eb0;
+  color: #ffff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -25px;
+  border-radius: 50%;
+  line-height: 50px;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media screen and (max-width: 980px) {
+  nav {
+    display: none;
+  }
+  .nav-responsive {
+    display: block;
+  }
+  nav.responsive {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    background-color: #233337;
+    width: 180px;
+  }
+  nav.responsive ul {
+    display: block !important;
+  }
+  nav.responsive ul li {
+    border-bottom: 1px solid #ffff;
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .sobremi .fila {
+    display: block;
+  }
+  .sobremi .fila .col {
+    width: fit-content;
+  }
+
+  .skills .fila {
+    display: block;
+  }
+  .skills .fila .col {
+    width: 100%;
+  }
+  .skills .fila .col .barra-skill {
+    width: 100%;
+  }
+
+  .curriculum .fila {
+    display: block;
+  }
+  .curriculum .fila .col {
+    width: 90%;
+  }
+  .curriculum .fila .derecha {
+    margin-left: 20px;
+  }
+
+  .portfolio .galeria {
+    display: block;
+    width: 100%;
+  }
+  .portfolio .galeria .proyecto {
+    max-width: 100%;
+  }
+  .portfolio .galeria .proyecto img {
+    width: 100%;
+  }
+  .contacto .fila {
+    display: block;
+  }
+  .contacto .fila .col {
+    width: 100%;
+  }
+}
