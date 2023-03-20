@@ -254,6 +254,10 @@ html {
 .skills .contenido-seccion {
   max-width: 1100px;
   margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* ajustar si es necesario */
+  justify-content: center;
 }
 .skills h2 {
   font-size: 48px;
