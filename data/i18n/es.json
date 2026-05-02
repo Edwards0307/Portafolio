@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "home": "INICIO",
+    "about": "SOBRE MÍ",
+    "skills": "HABILIDADES",
+    "resume": "CURRICULUM",
+    "projects": "PROYECTOS",
+    "contact": "CONTACTO"
+  },
+  "hero": {
+    "available": "Disponible para nuevos proyectos",
+    "greeting": "Hola, soy",
+    "name": "Edwards Ardila",
+    "roles": ["Full Stack Developer", "React & TypeScript", ".NET Developer", "Cloud Engineer"],
+    "cta_projects": "Ver proyectos",
+    "cta_contact": "Contáctame"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description": "Soy Ingeniero de Sistemas y desarrollador Full Stack con experiencia construyendo aplicaciones web modernas. Actualmente trabajo en proyectos empresariales para <strong>HP</strong>, desarrollando interfaces frontend escalables con React y TypeScript, y microservicios en .NET Core integrados con SQL Server. Tengo experiencia en entornos cloud (AWS y Azure), pipelines CI/CD y metodologías ágiles Scrum.",
+    "personal_title": "Datos Personales",
+    "phone": "Teléfono",
+    "phone_val": "+57 318 873 1800",
+    "email": "Email",
+    "email_val": "edwards.ardila03@gmail.com",
+    "city": "Ciudad",
+    "city_val": "Cali",
+    "country": "País",
+    "country_val": "Colombia",
+    "lang": "Idioma",
+    "lang_val": "Español · Inglés Técnico",
+    "role": "Cargo",
+    "role_val": "Full Stack Developer",
+    "interests_title": "Intereses",
+    "i_study": "ESTUDIOS",
+    "i_music": "MÚSICA",
+    "i_travel": "VIAJES",
+    "i_food": "COMIDA",
+    "download_cv": "Descargar CV"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Herramientas & Cloud"
+  },
+  "resume": {
+    "title": "Experiencia",
+    "education_title": "Educación",
+    "experience_title": "Experiencia",
+    "jobs": [
+      {
+        "id": "hp",
+        "role": "Full Stack Developer",
+        "company": "HP",
+        "period": "2023 – Actualidad",
+        "description": "Desarrollo de aplicaciones web empresariales con React, TypeScript y microservicios .NET Core integrados con SQL Server.",
+        "items": [
+          "Desarrollo de interfaces modernas con React y TypeScript",
+          "Creación y mantenimiento de microservicios con .NET Core",
+          "Trabajo en equipos ágiles (Scrum)",
+          "Despliegues automatizados con CI/CD pipelines",
+          "Migración cloud de AWS a Azure"
+        ]
+      },
+      {
+        "id": "simpleservice",
+        "role": "Full Stack Developer",
+        "company": "SimpleService",
+        "period": "2023",
+        "description": "Equipo de desarrollo ágil (sprints 3 semanas) construyendo plataforma de servicios con múltiples funcionalidades.",
+        "items": [
+          "CRUD de servicios, autenticación y notificaciones",
+          "Integración de pasarela de pago con Stripe",
+          "Firebase para Auth y almacenamiento",
+          "Notificaciones por correo (Nodemailer)",
+          "Dashboard con estadísticas y gráficas"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "henry",
+        "degree": "Full Stack Web Developer",
+        "institution": "Henry Bootcamp",
+        "period": "2022 – 2023",
+        "items": [
+          "Desarrollo ágil con metodología SCRUM",
+          "Arquitectura cliente-servidor",
+          "Principios de código limpio",
+          "Control de versiones con Git",
+          "Creación y consumo de APIs REST",
+          "Bases de datos PostgreSQL, Sequelize, MySQL"
+        ]
+      },
+      {
+        "id": "usm",
+        "degree": "Ingeniero de Sistemas",
+        "institution": "Universidad Santiago Mariño",
+        "period": "2012 – 2017",
+        "items": [
+          "Fundamentos de ingeniería de software",
+          "Trabajo en equipo y metodologías colaborativas",
+          "Ética y responsabilidad profesional",
+          "Adaptabilidad y manejo de tecnología"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "btn_demo": "Demo",
+    "btn_code": "Código",
+    "coming_soon": "Próximamente",
+    "list": [
+      {
+        "id": "simpleservice",
+        "title": "SimpleService",
+        "description": "Plataforma de servicios con catálogo, carrito de compras, pasarela de pago Stripe, autenticación Firebase y panel de administración.",
+        "tech": ["React", "Node.js", "PostgreSQL", "Firebase", "Stripe"],
+        "demo": "https://simpleservice-six.vercel.app/",
+        "github": "https://github.com/Edwards0307",
+        "image": "assets/img/projects/SimpleService.jpg"
+      },
+      {
+        "id": "videogames",
+        "title": "App VideoGames",
+        "description": "Aplicación SPA que consume la API de RAWG para explorar videojuegos, con filtros, ordenamiento y creación de juegos personalizados.",
+        "tech": ["React", "Redux", "Node.js", "PostgreSQL"],
+        "demo": "",
+        "github": "https://github.com/Edwards0307",
+        "image": "assets/img/projects/videoGames.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "name_label": "Nombre",
+    "name_placeholder": "Tu nombre",
+    "email_label": "Correo",
+    "email_placeholder": "ejemplo@correo.com",
+    "message_label": "Mensaje",
+    "message_placeholder": "¿En qué puedo ayudarte?",
+    "send_btn": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado con éxito!",
+    "error": "Error al enviar. Intenta de nuevo.",
+    "invalid_email": "Correo inválido",
+    "loc": "Cali, Colombia",
+    "phone": "+57 318 873 1800",
+    "email_val": "edwards.ardila03@gmail.com"
+  },
+  "footer": {
+    "rights": "© 2024 Edwards Ardila. Todos los derechos reservados.",
+    "made": "Hecho con"
+  }
+}

@@ -1,478 +1,482 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./img/edwards.jpg" />
+    <meta
+      name="description"
+      content="Edwards Ardila — Full Stack Developer. React, TypeScript, .NET. Cali, Colombia."
+    />
+    <meta
+      name="keywords"
+      content="Full Stack Developer, React, TypeScript, .NET, Colombia, Edwards Ardila"
+    />
+    <meta property="og:title" content="Edwards Ardila — Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Portafolio personal de Edwards Ardila, desarrollador Full Stack."
+    />
+    <meta
+      property="og:image"
+      content="assets/img/profile/edwards-ardila-full-stack-developer.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#4c9eb0" />
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="assets/img/profile/edwards-ardila-full-stack-developer.jpg"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./index.css" />
-
-    <script type="text/javascript">
-      function validarEmail(elemento) {
-        var texto = document.getElementById(elemento.id).value;
-        var regex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-
-        if (!regex.test(texto)) {
-          document.getElementById("resultado").innerHTML = "Correo invalido";
-        } else {
-          document.getElementById("resultado").innerHTML = "";
-        }
-      }
-    </script>
-
-    <title>Edwards Alexis Ardila Martinez</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Edwards Ardila — Full Stack Developer</title>
   </head>
   <body>
-    <!-- Menú encabezado -->
+    <!-- ── Header ──────────────────────────────────────────────────────── -->
     <div class="contenedor-header">
       <header>
         <div class="logo">
-          <a href="#">Edwards</a>
+          <a href="#inicio">Edwards<span>.</span></a>
         </div>
         <nav id="nav">
           <ul>
-            <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
-            <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
-            <li><a href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
-            <li>
-              <a href="#curriculum" onclick="seleccionar()">CURRICULUM</a>
-            </li>
-            <li><a href="#portfolio" onclick="seleccionar()">PROYECTOS</a></li>
-            <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+            <li><a href="#inicio" class="nav-link" data-i18n="nav.home">INICIO</a></li>
+            <li><a href="#sobremi" class="nav-link" data-i18n="nav.about">SOBRE MÍ</a></li>
+            <li><a href="#skills" class="nav-link" data-i18n="nav.skills">HABILIDADES</a></li>
+            <li><a href="#curriculum" class="nav-link" data-i18n="nav.resume">CURRICULUM</a></li>
+            <li><a href="#portfolio" class="nav-link" data-i18n="nav.projects">PROYECTOS</a></li>
+            <li><a href="#contacto" class="nav-link" data-i18n="nav.contact">CONTACTO</a></li>
           </ul>
         </nav>
-        <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-          <i class="fa-solid fa-bars"></i>
+        <div class="header-actions">
+          <div class="lang-toggle" aria-label="Cambiar idioma">
+            <button class="lang-btn active" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+          </div>
+          <button class="nav-toggle" aria-label="Menú" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
       </header>
     </div>
 
-    <!-- Inicio -->
+    <!-- ── Hero ────────────────────────────────────────────────────────── -->
     <section id="inicio" class="inicio">
-      <div class="contenido-banner">
-        <div class="contenedor-img">
-          <img src="img/edwards.jpg" alt="img" />
+      <div class="hero-inner">
+        <div class="hero-badge" data-i18n="hero.available">Disponible para nuevos proyectos</div>
+        <img
+          src="assets/img/profile/edwards-ardila-full-stack-developer.jpg"
+          alt="Edwards Ardila"
+          class="hero-avatar"
+        />
+        <p class="hero-greeting" data-i18n="hero.greeting">Hola, soy</p>
+        <h1 class="hero-name" data-i18n="hero.name">Edwards Ardila</h1>
+        <p class="hero-role"><span id="typewriter"></span></p>
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn-primary" data-i18n="hero.cta_projects">Ver proyectos</a>
+          <a href="#contacto" class="btn-outline" data-i18n="hero.cta_contact">Contáctame</a>
         </div>
-        <h1>Edwards Alexis Ardila Martinez</h1>
-        <h2>Full Stack Developer | React | TypeScript | .NET</h2>
-        <div class="redes">
-          <a href="https://www.facebook.com/profile.php?id=100077125203507"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href="https://twitter.com/edwards_ardila"
-            ><i class="fa-brands fa-twitter"></i
-          ></a>
-          <a
-            href="https://api.whatsapp.com/send?phone=573188731800&text=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BBGracias%20por%20tu%20inter%C3%A9s%20en%20contactarme%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB"
-            ><i class="fa-brands fa-whatsapp"></i
-          ></a>
+        <div class="hero-socials">
           <a
             href="https://www.linkedin.com/in/edwards-alexis-ardila-martinez-desarrollador-full-stack/"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="https://github.com/Edwards0307"
-            ><i class="fa-brands fa-github"></i
-          ></a>
+            target="_blank"
+            rel="noopener"
+            class="social-icon"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://github.com/Edwards0307"
+            target="_blank"
+            rel="noopener"
+            class="social-icon"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a
+            href="https://api.whatsapp.com/send?phone=573188731800&text=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BBGracias%20por%20tu%20inter%C3%A9s%20en%20contactarme"
+            target="_blank"
+            rel="noopener"
+            class="social-icon"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a
+            href="https://twitter.com/edwards_ardila"
+            target="_blank"
+            rel="noopener"
+            class="social-icon"
+            aria-label="Twitter/X"
+          >
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Sobre mi -->
+    <!-- ── About ───────────────────────────────────────────────────────── -->
     <section id="sobremi" class="sobremi">
-      <div class="contenido-seccion">
-        <h2>Sobre Mí</h2>
-        <p>
-  Hola mi nombre es <span>Edwards Ardila</span>. Soy Ingeniero de Sistemas y 
-  desarrollador Full Stack con experiencia construyendo aplicaciones web 
-  modernas utilizando tecnologías como React, TypeScript y .NET.
-
-  Actualmente trabajo en proyectos empresariales para HP, desarrollando 
-  interfaces frontend escalables y microservicios integrados con SQL Server.
-
-  Tengo experiencia trabajando en entornos cloud como AWS y Azure, utilizando 
-  pipelines de CI/CD y metodologías ágiles como Scrum.
-
-  Me apasiona crear aplicaciones escalables, escribir código limpio y seguir 
-  mejorando constantemente mis habilidades como desarrollador.
-</p>
-
-        <div class="fila">
-          <!-- datos personales -->
-          <div class="col">
-            <h3>Datos Personales</h3>
-            <ul>
-              <li>
-                <strong>Teléfono</strong>
-                +573187341537
-              </li>
-              <li>
-                <strong>Email</strong>
-                edwards.ardila03@gmail.com
-              </li>
-              <li>
-                <strong>Ciudad</strong>
-                Cali
-              </li>
-              <li>
-                <strong>País</strong>
-                Colombia
-              </li>
-              <li>
-                <strong>Idioma</strong>
-                  Español - Nativo / Inglés - Técnico
-              </li>
-              <li>
-                <strong>Cargo</strong>
-                <span>Full Stack Developer</span>
-              </li>
-            </ul>
+      <div class="section-inner">
+        <h2 class="section-title" data-i18n="about.title">Sobre Mí</h2>
+        <div class="about-grid">
+          <div class="reveal">
+            <p class="about-description" data-i18n-html="about.description"></p>
+            <div class="about-info">
+              <h3 data-i18n="about.personal_title">Datos Personales</h3>
+              <ul class="info-list">
+                <li>
+                  <span class="label" data-i18n="about.phone">Teléfono</span>
+                  <span data-i18n="about.phone_val">+57 318 873 1800</span>
+                </li>
+                <li>
+                  <span class="label" data-i18n="about.email">Email</span>
+                  <span data-i18n="about.email_val">edwards.ardila03@gmail.com</span>
+                </li>
+                <li>
+                  <span class="label" data-i18n="about.city">Ciudad</span>
+                  <span data-i18n="about.city_val">Cali</span>
+                </li>
+                <li>
+                  <span class="label" data-i18n="about.country">País</span>
+                  <span data-i18n="about.country_val">Colombia</span>
+                </li>
+                <li>
+                  <span class="label" data-i18n="about.lang">Idioma</span>
+                  <span data-i18n="about.lang_val">Español · Inglés Técnico</span>
+                </li>
+                <li>
+                  <span class="label" data-i18n="about.role">Cargo</span>
+                  <span class="role-badge" data-i18n="about.role_val">Full Stack Developer</span>
+                </li>
+              </ul>
+            </div>
+            <a href="docs/pdf/CV-EdwardsArdila.pdf" download class="btn-download">
+              <span data-i18n="about.download_cv">Descargar CV</span>
+              <i class="fa-solid fa-download"></i>
+            </a>
           </div>
-
-          <!-- intereses -->
-          <div class="col">
-            <h3>Intereses</h3>
-            <div class="contenedor-intereses">
+          <div class="reveal" style="transition-delay: 0.1s">
+            <h3 class="interests-title" data-i18n="about.interests_title">Intereses</h3>
+            <div class="interests-grid">
               <div class="interes">
-                <i class="fa-solid fa-book"></i>
-                <span>ESTUDIOS</span>
+                <i class="fa-solid fa-book"></i> <span data-i18n="about.i_study">ESTUDIOS</span>
               </div>
               <div class="interes">
-                <i class="fa-solid fa-headphones"></i>
-                <span>MÚSICA</span>
+                <i class="fa-solid fa-headphones"></i><span data-i18n="about.i_music">MÚSICA</span>
               </div>
               <div class="interes">
-                <i class="fa-solid fa-plane"></i>
-                <span>VIAJES</span>
+                <i class="fa-solid fa-plane"></i> <span data-i18n="about.i_travel">VIAJES</span>
               </div>
               <div class="interes">
-                <i class="fa fa-cutlery"></i>
-                <span>COMIDA</span>
+                <i class="fa-solid fa-utensils"></i><span data-i18n="about.i_food">COMIDA</span>
               </div>
             </div>
           </div>
         </div>
-        <a download="Doc Pdf" href="./docs/pdf/CV-EdwardsArdila.pdf">
-          Descargar CV <i class="fa-sharp fa-solid fa-download"></i>
-          <span class="overlay"></span>
-        </a>
       </div>
     </section>
 
-    <!-- Skills -->
+    <!-- ── Skills ──────────────────────────────────────────────────────── -->
     <section id="skills" class="skills">
-      <h2>Habilidades</h2>
-      <div class="contenido-seccion">
-        <img
-          src="img/HTML5.png"
-          alt="HTML5"
-          style="width: 100px; height: 100px"
-        />
+      <div class="section-inner">
+        <h2 class="section-title" data-i18n="skills.title">Habilidades</h2>
+        <div class="skills-grid">
+          <div class="skills-group reveal">
+            <div class="skills-group-title" data-i18n="skills.frontend">Frontend</div>
+            <div class="skill-item">
+              <img src="assets/img/skills/React.png" alt="React" class="skill-logo" />
+              <span class="skill-name">React</span>
+            </div>
+            <div class="skill-item">
+              <img src="assets/img/skills/JavaScript.png" alt="JavaScript" class="skill-logo" />
+              <span class="skill-name">JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <img
+                src="assets/img/skills/TypeScript.png"
+                alt="TypeScript"
+                class="skill-logo"
+                onerror="this.style.display = 'none'"
+              />
+              <span class="skill-name">TypeScript</span>
+            </div>
+            <div class="skill-item">
+              <img src="assets/img/skills/HTML5.png" alt="HTML5" class="skill-logo" />
+              <span class="skill-name">HTML5 / CSS3</span>
+            </div>
+            <div class="skill-item">
+              <img src="assets/img/skills/Redux.png" alt="Redux" class="skill-logo" />
+              <span class="skill-name">Redux</span>
+            </div>
+          </div>
 
-        <img
-          src="img/JavaScript.png"
-          alt="JavaScript"
-          style="width: 100px; height: 100px"
-        />
+          <div class="skills-group reveal" style="transition-delay: 0.1s">
+            <div class="skills-group-title" data-i18n="skills.backend">Backend</div>
+            <div class="skill-item">
+              <img
+                src="assets/img/skills/DotNet.png"
+                alt=".NET"
+                class="skill-logo"
+                onerror="this.style.display = 'none'"
+              />
+              <span class="skill-name">.NET Core</span>
+            </div>
+            <div class="skill-item">
+              <img src="assets/img/skills/NodeJS.png" alt="Node.js" class="skill-logo" />
+              <span class="skill-name">Node.js</span>
+            </div>
+            <div class="skill-item">
+              <img
+                src="assets/img/skills/SQLServer.png"
+                alt="SQL Server"
+                class="skill-logo"
+                onerror="this.style.display = 'none'"
+              />
+              <span class="skill-name">SQL Server</span>
+            </div>
+            <div class="skill-item">
+              <img src="assets/img/skills/Postman.png" alt="Postman" class="skill-logo" />
+              <span class="skill-name">REST APIs / Postman</span>
+            </div>
+          </div>
 
-        <img
-          src="img/NodeJS.png"
-          alt="NodeJS"
-          style="width: 100px; height: 100px"
-        />
-
-        <img
-          src="img/Postman.png"
-          alt="Postman"
-          style="width: 100px; height: 100px"
-        />
-
-        <img
-          src="img/React.png"
-          alt="React"
-          style="width: 100px; height: 100px"
-        />
-
-        <img
-          src="img/Redux.png"
-          alt="Redux"
-          style="width: 100px; height: 100px"
-        />
-
-        <img src="img/Git.png" alt="Git" style="width: 100px; height: 100px" />
-
-        <img src="img/TypeScript.png" alt="TypeScript" style="width:100px;height:100px">
-
-        <img src="img/DotNet.png" alt=".NET" style="width:100px;height:100px">
-        
-        <img src="img/Azure.png" alt="Azure" style="width:100px;height:100px">
-        
-        <img src="img/SQLServer.png" alt="SQL Server" style="width:100px;height:100px">
+          <div class="skills-group reveal" style="transition-delay: 0.2s">
+            <div class="skills-group-title" data-i18n="skills.tools">Herramientas & Cloud</div>
+            <div class="skill-item">
+              <img
+                src="assets/img/skills/Azure.png"
+                alt="Azure"
+                class="skill-logo"
+                onerror="this.style.display = 'none'"
+              />
+              <span class="skill-name">Azure</span>
+            </div>
+            <div class="skill-item">
+              <img src="assets/img/skills/Git.png" alt="Git" class="skill-logo" />
+              <span class="skill-name">Git / GitHub</span>
+            </div>
+            <div class="skill-item">
+              <i
+                class="fa-brands fa-docker skill-logo"
+                style="font-size: 30px; color: #2496ed; width: 36px; text-align: center"
+              ></i>
+              <span class="skill-name">Docker / CI/CD</span>
+            </div>
+            <div class="skill-item">
+              <i
+                class="fa-solid fa-cloud skill-logo"
+                style="font-size: 28px; color: #4c9eb0; width: 36px; text-align: center"
+              ></i>
+              <span class="skill-name">AWS</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Currículum -->
+    <!-- ── Timeline ────────────────────────────────────────────────────── -->
     <section id="curriculum" class="curriculum">
-      <div class="contenido-section">
-        <h2>Curriculum</h2>
-        <div class="fila">
-          <div class="col izquierda">
-            <h3>Educación</h3>
-            <div class="item izq">
-              <h4>Full Stack Web Developer</h4>
-              <span class="casa">Henry</span>
-              <span class="fecha">2022 - 2023</span>
-              <ul>
-                <li>Desarrollo ágil metodología SCRUM</li>
-                <li>Entendimiento de arquitectura cliente-servidor</li>
-                <li>
-                  Conocimientos y aplicación en principios de código limpio
-                </li>
-                <li>Manejo de control de versiones y repositorios remotos</li>
-                <li>Creación y consumo de servicios REST</li>
-                <li>Manejo de bases de datos PostgreSQL, Sequelize, MySQL</li>
-              </ul>
-              <div class="conectori">
-                <div class="circuloi"></div>
-              </div>
+      <div class="section-inner">
+        <h2 class="section-title" data-i18n="resume.title">Experiencia</h2>
+        <div class="timeline-cols">
+          <div>
+            <div class="timeline-col-title">
+              <i class="fa-solid fa-briefcase"></i>
+              <span data-i18n="resume.experience_title">Experiencia</span>
             </div>
-
-            <div class="item izq">
-              <h4>Ingeniero de Sistemas</h4>
-              <span class="casa">Universidad Santiago Mariño</span>
-              <span class="fecha">2012 - 2017</span>
-              <ul>
-                <li>Responsabilidad Y adaptabilidad</li>
-                <li>Disposición para el uso y manejo de equipo y tecnología</li>
-                <li>Responsabilidad para alcanzar el bienestar común</li>
-                <li>Trabajo en equipo</li>
-                <li>Integridad y honestidad</li>
-                <li>
-                  Normas de conducta, principios y ética en la práctica
-                  profesional
-                </li>
-              </ul>
-              <div class="conectori">
-                <div class="circuloi"></div>
-              </div>
-            </div>
+            <div class="timeline-list" id="experience-list"></div>
           </div>
-
-          <div class="col derecha">
-            <h3>Experiencia</h3>
-<div class="item der">
-  <h4>Full Stack Developer</h4>
-  <span class="casa">HP</span>
-  <span class="fecha">2023 - Actualidad</span>
-  <p>
-    Desarrollo de aplicaciones web empresariales utilizando React y TypeScript 
-    para el frontend y microservicios en .NET Core integrados con SQL Server.
-  </p>
-  <ul>
-    <li>Desarrollo de interfaces modernas usando React y TypeScript.</li>
-    <li>Creación y mantenimiento de microservicios con .NET Core.</li>
-    <li>Trabajo en equipos ágiles utilizando Scrum.</li>
-    <li>Implementación de despliegues automatizados con CI/CD.</li>
-    <li>Participación en procesos de migración cloud de AWS a Azure.</li>
-  </ul>
-  <div class="conectord">
-    <div class="circulod"></div>
-  </div>
-</div>
-
-            
-            <div class="item der">
-              <h4>Full Stack Web Developer</h4>
-              <span class="casa">SimpleService</span>
-              <span class="fecha">2023</span>
-              <p>
-                Participación en un equipo de desarrollo ágil con sprints de
-                tres semanas, presentando avances a un Product Owner en el
-                desarrollo de una app completa donde los usuarios pueden acceder
-                a una amplia variedad de servicios.
-              </p>
-              <ul>
-                <li>
-                  Características básicas de Simple Service (CRUD de servicios,
-                  Auth, Notificaciones, Catálogo, Checkout, Sección
-                  Administrador, Sección Usuario, Gráficos, Chatbot).
-                </li>
-
-                <li>Integración de pasarela de pago (Stripe).</li>
-
-                <li>Gestión de carrito de compras y órdenes de servicio.</li>
-
-                <li>
-                  Implementación de notificaciones por correo electrónico
-                  (nodemailer).
-                </li>
-
-                <li>
-                  Implementación de Firebase para autenticación (Auth) y
-                  almacenamiento de reseñas y pedidos.
-                </li>
-
-                <li>Gestión de usuarios, gestión de productos (CRUD).</li>
-
-                <li>
-                  Estadísticas y gráficas de ventas y usuarios, entre otras
-                  funcionalidades.
-                </li>
-              </ul>
-              <div class="conectord">
-                <div class="circulod"></div>
-              </div>
+          <div>
+            <div class="timeline-col-title">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span data-i18n="resume.education_title">Educación</span>
             </div>
+            <div class="timeline-list" id="education-list"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Proyectos -->
+    <!-- ── Projects ────────────────────────────────────────────────────── -->
     <section id="portfolio" class="portfolio">
-      <div class="contenido-seccion">
-        <h2>Proyectos</h2>
-        <div class="galeria">
-          <div class="proyecto">
-            <a href="https://simpleservice-six.vercel.app/" target="_blank">
-              <img src="img/SimpleService.jpg" alt="#" />
-              <div class="overlay">
-                <h3>SimpleService</h3>
-                <p>React | Node.js | PostgreSQL</p>
-                <p>Demo</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="proyecto">
-            <a href="" target="_blank">
-              <img src="img/videoGames.jpg" alt="#" />
-              <div class="overlay">
-                <h3>App VideoGames</h3>
-                <p>React</p>
-                <p>Demo</p>
-              </div>
-            </a>
-          </div>
-        </div>
+      <div class="section-inner">
+        <h2 class="section-title" data-i18n="projects.title">Proyectos</h2>
+        <div class="projects-grid" id="projects-grid"></div>
       </div>
     </section>
 
-    <!-- Contacto -->
+    <!-- ── Contact ─────────────────────────────────────────────────────── -->
     <section id="contacto" class="contacto">
-      <div class="contenido-seccion">
-        <h2>Contacto</h2>
-        <div class="fila">
-          <div class="col">
-            <form id="form">
+      <div class="section-inner">
+        <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+        <div class="contact-grid">
+          <div class="contact-form reveal">
+            <form id="contact-form" novalidate>
               <div class="field">
-                <label for="from_name">Nombre</label>
+                <label for="from_name" data-i18n="contact.name_label">Nombre</label>
                 <input
                   type="text"
-                  placeholder="Escribe tu nombre aqui"
-                  name="from_name"
                   id="from_name"
+                  name="from_name"
+                  data-i18n-placeholder="contact.name_placeholder"
+                  placeholder="Tu nombre"
                   required
                 />
               </div>
-
-              <label for="from_name">Mensaje</label>
               <div class="field">
+                <label for="user_email" data-i18n="contact.email_label">Correo</label>
+                <input
+                  type="email"
+                  id="user_email"
+                  name="user_email"
+                  data-i18n-placeholder="contact.email_placeholder"
+                  placeholder="ejemplo@correo.com"
+                  required
+                />
+                <p class="field-error" id="email-error"></p>
+              </div>
+              <div class="field">
+                <label for="message" data-i18n="contact.message_label">Mensaje</label>
                 <textarea
-                  type="text"
-                  placeholder="Escribe un mensaje"
-                  name="message"
                   id="message"
-                  cols="30"
-                  rows="10"
+                  name="message"
+                  rows="6"
+                  data-i18n-placeholder="contact.message_placeholder"
+                  placeholder="¿En qué puedo ayudarte?"
                   required
                 ></textarea>
               </div>
-
-              <div class="field">
-                <label for="user_email">Correo</label>
-                <input
-                  type="text"
-                  id="user_email"
-                  name="user_email"
-                  placeholder="ejemplo@ejemplo.com"
-                  onkeyup="validarEmail(this)"
-                />
-                <a id="resultado"></a>
-              </div>
-
-              <button id="button" type="submit" value="Enviar correo">
-                Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
-                <span class="overlay"></span>
+              <button id="contact-btn" type="submit">
+                <span class="btn-text" data-i18n="contact.send_btn">Enviar Mensaje</span>
+                <i class="fa-solid fa-paper-plane"></i>
+                <span class="btn-spinner"></span>
               </button>
             </form>
-
-            <script
-              type="text/javascript"
-              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-            ></script>
-
-            <script type="text/javascript">
-              emailjs.init("aNZb5pta1uvQsES2q");
-            </script>
           </div>
 
-          <!-- Mapa -->
-          <div class="col">
-            <img src="img/ubicacion.png" alt="" />
-            <div class="info">
-              <ul>
-                <li>
-                  <i class="fa-solid fa-location-dot"></i>
-                  Cali - Colombia
-                </li>
-                <li>
-                  <i class="fa-solid fa-mobile-screen"></i>
-                  Llamame al: +573188731800
-                </li>
-                <li>
-                  <i class="fa-solid fa-envelope"></i>
-                  Email: edwards.ardila03@gmail.com
-                </li>
-              </ul>
+          <div class="contact-info reveal" style="transition-delay: 0.1s">
+            <h3 class="contact-info-title">¿Hablamos?</h3>
+            <p class="contact-info-sub">
+              Estoy abierto a oportunidades, proyectos freelance o simplemente a conectar con otros
+              desarrolladores.
+            </p>
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-detail-text">
+                <strong>Ubicación</strong>
+                <span data-i18n="contact.loc">Cali, Colombia</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+              <div class="contact-detail-text">
+                <strong>Teléfono</strong>
+                <span data-i18n="contact.phone">+57 318 873 1800</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-detail-text">
+                <strong>Email</strong>
+                <span data-i18n="contact.email_val">edwards.ardila03@gmail.com</span>
+              </div>
+            </div>
+            <div class="contact-socials">
+              <a
+                href="https://www.linkedin.com/in/edwards-alexis-ardila-martinez-desarrollador-full-stack/"
+                target="_blank"
+                rel="noopener"
+                class="social-icon"
+                aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://github.com/Edwards0307"
+                target="_blank"
+                rel="noopener"
+                class="social-icon"
+                aria-label="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                href="https://api.whatsapp.com/send?phone=573188731800&text=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BBGracias%20por%20tu%20inter%C3%A9s"
+                target="_blank"
+                rel="noopener"
+                class="social-icon"
+                aria-label="WhatsApp"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ── Footer ──────────────────────────────────────────────────────── -->
     <footer>
-      <a href="#inicio" class="arriba">
-        <i class="fa-solid fa-angles-up"></i>
-      </a>
-      <div class="redes">
-        <a href="https://www.facebook.com/profile.php?id=100077125203507"
-          ><i class="fa-brands fa-facebook"></i
-        ></a>
-        <a href="https://twitter.com/edwards_ardila"
-          ><i class="fa-brands fa-twitter"></i
-        ></a>
-        <a
-          href="https://api.whatsapp.com/send?phone=573188731800&text=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BBGracias%20por%20tu%20inter%C3%A9s%20en%20contactarme%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB"
-          ><i class="fa-brands fa-whatsapp"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/edwards-alexis-ardila-martinez-042980149/"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-        <a href="https://github.com/Edwards0307"
-          ><i class="fa-brands fa-github"></i
-        ></a>
+      <div class="footer-inner">
+        <a href="#inicio" class="back-top" aria-label="Volver arriba">
+          <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="footer-logo">Edwards<span style="color: var(--text-primary)">.</span></div>
+        <div class="footer-socials">
+          <a
+            href="https://www.linkedin.com/in/edwards-alexis-ardila-martinez-desarrollador-full-stack/"
+            target="_blank"
+            rel="noopener"
+            class="social-icon"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/Edwards0307"
+            target="_blank"
+            rel="noopener"
+            class="social-icon"
+            aria-label="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://api.whatsapp.com/send?phone=573188731800"
+            target="_blank"
+            rel="noopener"
+            class="social-icon"
+            aria-label="WhatsApp"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://twitter.com/edwards_ardila"
+            target="_blank"
+            rel="noopener"
+            class="social-icon"
+            aria-label="Twitter"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
+        <div class="footer-meta">
+          <span data-i18n="footer.rights"
+            >© 2024 Edwards Ardila. Todos los derechos reservados.</span
+          >
+          <span
+            ><span data-i18n="footer.made">Hecho con</span> <i class="fa-solid fa-heart"></i
+          ></span>
+        </div>
       </div>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
