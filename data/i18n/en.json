@@ -36,7 +36,8 @@
     "i_music": "MUSIC",
     "i_travel": "TRAVEL",
     "i_food": "FOOD",
-    "download_cv": "Download CV"
+    "download_cv": "Download CV",
+    "cv_file": "docs/pdf/Edwards-Ardila-CV-Desarrolador-Full-Stack-ENG.pdf"
   },
   "skills": {
     "title": "Skills",
