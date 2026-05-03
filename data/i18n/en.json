@@ -137,9 +137,22 @@
         "demo": "https://pi-videogames-one-lime.vercel.app/",
         "github": "https://github.com/Edwards0307/PI-Videogames",
         "images": [
-          "assets/img/projects/videoGames.png",
           "assets/img/projects/videoGames-1.png",
-          "assets/img/projects/videoGames-2.png"
+          "assets/img/projects/videoGames-2.png",
+          "assets/img/projects/videoGames-3.png"
+        ]
+      },
+      {
+        "id": "hemeroteca",
+        "title": "Hemeroteca App",
+        "description": "Full-stack application for managing a digital library with books and magazines, JWT authentication and an admin panel exclusive to the admin role.",
+        "tech": ["React", "TypeScript", ".NET 8", "PostgreSQL", "Dapper", "Docker"],
+        "demo": "https://hemeroteca.vercel.app/",
+        "github": "https://github.com/Edwards0307/hemeroteca",
+        "images": [
+          "assets/img/projects/hemeroteca-1.png",
+          "assets/img/projects/hemeroteca-2.png",
+          "assets/img/projects/hemeroteca-3.png"
         ]
       }
     ]
