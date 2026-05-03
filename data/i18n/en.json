@@ -17,7 +17,7 @@
   },
   "about": {
     "title": "About Me",
-    "description": "I'm a Systems Engineer and Full Stack Developer with experience building modern web applications. I currently work on enterprise projects for <strong>HP</strong>, developing scalable frontend interfaces with React and TypeScript, and .NET Core microservices integrated with SQL Server. I have experience with cloud environments (AWS and Azure), CI/CD pipelines and Scrum agile methodologies.",
+    "description": "Systems Engineer and Full Stack Developer with experience building corporate web applications using <strong>React, TypeScript, and .NET</strong>. Currently working on enterprise projects for <strong>HP</strong>, developing scalable frontend interfaces and microservices integrated with SQL Server. Experienced in cloud environments (AWS and Azure), CI/CD pipelines, and Agile (Scrum) teams. Focused on writing clean, maintainable code and building scalable solutions for high-impact products.",
     "personal_title": "Personal Info",
     "phone": "Phone",
     "phone_val": "+57 318 734 1537",
@@ -28,16 +28,16 @@
     "country": "Country",
     "country_val": "Colombia",
     "lang": "Language",
-    "lang_val": "Spanish · Technical English",
+    "lang_val": "Spanish · Basic English",
     "role": "Role",
     "role_val": "Full Stack Developer",
-    "interests_title": "Interests",
-    "i_study": "LEARNING",
-    "i_music": "MUSIC",
-    "i_travel": "TRAVEL",
-    "i_food": "FOOD",
+    "achievements_title": "Achievements",
+    "achievement_1": "Successfully adapted to a global corporate environment with high technical standards.",
+    "achievement_2": "Maintained project continuity despite contractor changes, ensuring consistent performance and responsibilities.",
+    "achievement_3": "Optimized code to improve application efficiency and performance.",
+    "achievement_4": "Contributed to deployment stability by applying CI/CD best practices.",
     "download_cv": "Download CV",
-    "cv_file": "docs/pdf/Edwards-Ardila-CV-Desarrolador-Full-Stack-ENG.pdf"
+    "cv_file": "assets/docs/Edwards-Ardila-CV-Desarrolador-Full-Stack-ENG.pdf"
   },
   "skills": {
     "title": "Skills",
@@ -52,16 +52,18 @@
     "jobs": [
       {
         "id": "hp",
-        "role": "Full Stack Developer",
+        "role": "Full Stack .NET Developer",
         "company": "HP",
-        "period": "2023 – Present",
-        "description": "Enterprise web application development with React, TypeScript and .NET Core microservices integrated with SQL Server.",
+        "period": "October 2023 – Present",
+        "description": "Development and maintenance of corporate web applications using React 18, TypeScript and .NET Core microservices integrated with SQL Server.",
         "items": [
-          "Modern UI development with React and TypeScript",
-          "Building and maintaining microservices with .NET Core",
-          "Agile teamwork (Scrum)",
-          "Automated deployments with CI/CD pipelines",
-          "Cloud migration from AWS to Azure"
+          "Develop and maintain corporate web applications using React 18 and TypeScript",
+          "Implement user interfaces using Veneer (HP Design System) for consistent and scalable frontend components",
+          "Develop and maintain microservices using .NET Core integrated with SQL Server",
+          "Participate in Agile Scrum ceremonies: Daily Standups, Sprint Planning, Reviews and Retrospectives",
+          "Manage source code using Git and GitHub in a collaborative development environment",
+          "Participation in cloud migration toward Azure",
+          "Implement automated deployments through CI/CD pipelines"
         ]
       },
       {
@@ -97,8 +99,8 @@
       {
         "id": "usm",
         "degree": "Systems Engineer",
-        "institution": "Santiago Mariño University",
-        "period": "2012 – 2017",
+        "institution": "Santiago Mariño Polytechnic University Institute",
+        "period": "2012 – 2017 · Venezuela",
         "items": [
           "Software engineering fundamentals",
           "Teamwork and collaborative methodologies",

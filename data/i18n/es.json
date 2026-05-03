@@ -17,7 +17,7 @@
   },
   "about": {
     "title": "Sobre Mí",
-    "description": "Soy Ingeniero de Sistemas y desarrollador Full Stack con experiencia construyendo aplicaciones web modernas. Actualmente trabajo en proyectos empresariales para <strong>HP</strong>, desarrollando interfaces frontend escalables con React y TypeScript, y microservicios en .NET Core integrados con SQL Server. Tengo experiencia en entornos cloud (AWS y Azure), pipelines CI/CD y metodologías ágiles Scrum.",
+    "description": "Ingeniero de Sistemas y Desarrollador Full Stack con experiencia construyendo aplicaciones web corporativas utilizando <strong>React, TypeScript y .NET</strong>. Actualmente trabajo en proyectos empresariales para <strong>HP</strong>, desarrollando interfaces frontend escalables y microservicios integrados con SQL Server. Cuento con experiencia en entornos cloud (AWS y Azure), pipelines de CI/CD y metodologías ágiles (Scrum). Enfocado en escribir código limpio y mantenible, y en construir soluciones escalables para productos de alto impacto.",
     "personal_title": "Datos Personales",
     "phone": "Teléfono",
     "phone_val": "+57 318 734 1537",
@@ -28,16 +28,16 @@
     "country": "País",
     "country_val": "Colombia",
     "lang": "Idioma",
-    "lang_val": "Español · Inglés Técnico",
+    "lang_val": "Español · Inglés Básico",
     "role": "Cargo",
     "role_val": "Full Stack Developer",
-    "interests_title": "Intereses",
-    "i_study": "ESTUDIOS",
-    "i_music": "MÚSICA",
-    "i_travel": "VIAJES",
-    "i_food": "COMIDA",
+    "achievements_title": "Logros",
+    "achievement_1": "Adaptación exitosa a un entorno corporativo global con altos estándares técnicos.",
+    "achievement_2": "Mantenimiento de la continuidad del proyecto durante cambios de contratistas, asegurando desempeño y responsabilidades consistentes.",
+    "achievement_3": "Optimización de código para mejorar la eficiencia y el rendimiento de las aplicaciones.",
+    "achievement_4": "Contribución a la estabilidad de los despliegues mediante buenas prácticas de CI/CD.",
     "download_cv": "Descargar CV",
-    "cv_file": "docs/pdf/Edwards-Ardila-CV-Desarrolador-Full-Stack-ESP.pdf"
+    "cv_file": "assets/docs/Edwards-Ardila-CV-Desarrolador-Full-Stack-ESP.pdf"
   },
   "skills": {
     "title": "Habilidades",
@@ -52,16 +52,18 @@
     "jobs": [
       {
         "id": "hp",
-        "role": "Full Stack Developer",
+        "role": "Full Stack .NET Developer",
         "company": "HP",
-        "period": "2023 – Actualidad",
-        "description": "Desarrollo de aplicaciones web empresariales con React, TypeScript y microservicios .NET Core integrados con SQL Server.",
+        "period": "Octubre 2023 – Actualidad",
+        "description": "Desarrollo y mantenimiento de aplicaciones web corporativas con React 18, TypeScript y microservicios .NET Core integrados con SQL Server.",
         "items": [
-          "Desarrollo de interfaces modernas con React y TypeScript",
-          "Creación y mantenimiento de microservicios con .NET Core",
-          "Trabajo en equipos ágiles (Scrum)",
-          "Despliegues automatizados con CI/CD pipelines",
-          "Migración cloud de AWS a Azure"
+          "Desarrollo y mantenimiento de aplicaciones web corporativas con React 18 y TypeScript",
+          "Implementación de interfaces usando Veneer (HP Design System) para componentes frontend escalables",
+          "Desarrollo y mantenimiento de microservicios con .NET Core integrados con SQL Server",
+          "Participación en ceremonias Agile Scrum: Daily Standups, Sprint Planning, Reviews y Retrospectives",
+          "Gestión del código fuente con Git y GitHub en entorno colaborativo",
+          "Participación en la migración cloud hacia Azure",
+          "Implementación de despliegues automatizados mediante pipelines CI/CD"
         ]
       },
       {
@@ -97,8 +99,8 @@
       {
         "id": "usm",
         "degree": "Ingeniero de Sistemas",
-        "institution": "Universidad Santiago Mariño",
-        "period": "2012 – 2017",
+        "institution": "Instituto Universitario Politécnico Santiago Mariño",
+        "period": "2012 – 2017 · Venezuela",
         "items": [
           "Fundamentos de ingeniería de software",
           "Trabajo en equipo y metodologías colaborativas",

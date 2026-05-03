@@ -35,12 +35,11 @@ assets/
     skills/             # Tech logos
     projects/           # Project screenshots
     bg/                 # Background images
+  docs/                 # CV download (ESP + ENG)
 data/
   i18n/
     es.json             # Spanish content
     en.json             # English content
-docs/
-  pdf/                  # CV download
 ```
 
 ## Adding a New Project
@@ -70,5 +69,5 @@ npx serve .
 Then open `http://localhost:3000`.
 
 ## Author
-**Edwards Ardila** — Full Stack Developer  
-[LinkedIn](https://www.linkedin.com/in/edwards-alexis-ardila-martinez-desarrollador-full-stack/) · [GitHub](https://github.com/Edwards0307)
+**Edwards Ardila** — Full Stack .NET Developer  
+[LinkedIn](https://www.linkedin.com/in/edwards-ardila-desarrollador-full-stack/) · [GitHub](https://github.com/Edwards0307)
