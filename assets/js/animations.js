@@ -69,39 +69,85 @@ const Typewriter = (() => {
 })();
 
 const Projects = (() => {
+  function buildCarousel(images, title) {
+    const multi = images.length > 1;
+    return `
+      <div class="carousel-wrap">
+        ${images.map((src, i) => `<img src="${src}" alt="${title}" loading="lazy" class="${i === 0 ? 'active' : ''}" />`).join('')}
+      </div>
+      ${multi ? `<div class="carousel-dots">
+        ${images.map((_, i) => `<span class="carousel-dot ${i === 0 ? 'active' : ''}"></span>`).join('')}
+      </div>` : ''}
+    `;
+  }
+
+  function initCarousels() {
+    document.querySelectorAll('.carousel-wrap').forEach(wrap => {
+      const imgs = Array.from(wrap.querySelectorAll('img'));
+      if (imgs.length <= 1) return;
+
+      const dots = Array.from(wrap.closest('.project-img-wrap').querySelectorAll('.carousel-dot'));
+      let idx = 0;
+      let timer;
+
+      function goTo(n) {
+        imgs[idx].classList.remove('active');
+        dots[idx]?.classList.remove('active');
+        idx = n;
+        imgs[idx].classList.add('active');
+        dots[idx]?.classList.add('active');
+      }
+
+      const start = () => { timer = setInterval(() => goTo((idx + 1) % imgs.length), 3200); };
+      const stop  = () => clearInterval(timer);
+
+      dots.forEach((dot, i) => dot.addEventListener('click', () => { stop(); goTo(i); start(); }));
+      wrap.addEventListener('mouseenter', stop);
+      wrap.addEventListener('mouseleave', start);
+      start();
+    });
+  }
+
   function render(data) {
     if (!data?.list) return;
     const container = document.getElementById('projects-grid');
     if (!container) return;
 
-    container.innerHTML = data.list.map((project, i) => `
-      <article class="project-card reveal" style="transition-delay: ${i * 0.1}s">
-        <div class="project-img-wrap">
-          <img src="${project.image}" alt="${project.title}" loading="lazy" />
-          <div class="project-overlay">
-            ${project.demo ? `<a href="${project.demo}" target="_blank" rel="noopener" class="btn-project">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> ${data.btn_demo}
-            </a>` : `<span class="btn-project btn-coming">${data.coming_soon}</span>`}
-            ${project.github ? `<a href="${project.github}" target="_blank" rel="noopener" class="btn-project btn-ghost">
-              <i class="fa-brands fa-github"></i> ${data.btn_code}
-            </a>` : ''}
+    container.innerHTML = data.list.map((project, i) => {
+      const images = project.images?.length ? project.images : [project.image];
+      return `
+        <article class="project-card reveal" style="transition-delay: ${i * 0.1}s">
+          <div class="project-img-wrap">
+            ${buildCarousel(images, project.title)}
+            <div class="project-overlay">
+              ${project.demo
+                ? `<a href="${project.demo}" target="_blank" rel="noopener" class="btn-project">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> ${data.btn_demo}
+                   </a>`
+                : `<span class="btn-project btn-coming">${data.coming_soon}</span>`}
+              ${project.github ? `<a href="${project.github}" target="_blank" rel="noopener" class="btn-project btn-ghost">
+                <i class="fa-brands fa-github"></i> ${data.btn_code}
+              </a>` : ''}
+            </div>
           </div>
-        </div>
-        <div class="project-info">
-          <h3>${project.title}</h3>
-          <p>${project.description}</p>
-          <div class="project-tags">
-            ${project.tech.map(t => `<span class="tag">${t}</span>`).join('')}
+          <div class="project-info">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <div class="project-tags">
+              ${project.tech.map(t => `<span class="tag">${t}</span>`).join('')}
+            </div>
           </div>
-        </div>
-      </article>
-    `).join('');
+        </article>
+      `;
+    }).join('');
 
     document.querySelectorAll('.project-card.reveal').forEach(el => {
       new IntersectionObserver((entries) => {
         entries.forEach(e => e.isIntersecting && e.target.classList.add('visible'));
       }, { threshold: 0.1 }).observe(el);
     });
+
+    initCarousels();
   }
 
   return { render };

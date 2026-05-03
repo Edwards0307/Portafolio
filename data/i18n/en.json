@@ -123,16 +123,24 @@
         "tech": ["React", "Node.js", "PostgreSQL", "Firebase", "Stripe"],
         "demo": "https://simpleservice-six.vercel.app/",
         "github": "https://github.com/Edwards0307",
-        "image": "assets/img/projects/SimpleService.jpg"
+        "images": [
+          "assets/img/projects/simpleservice-1.png",
+          "assets/img/projects/simpleservice-2.png",
+          "assets/img/projects/simpleservice-3.png"
+        ]
       },
       {
         "id": "videogames",
         "title": "VideoGames App",
         "description": "SPA that consumes the RAWG API to explore video games, with filters, sorting and custom game creation.",
         "tech": ["React", "Redux", "Node.js", "PostgreSQL"],
-        "demo": "",
+        "demo": "https://pi-videogames-one-lime.vercel.app/",
         "github": "https://github.com/Edwards0307",
-        "image": "assets/img/projects/videoGames.jpg"
+        "images": [
+          "assets/img/projects/videoGames.png",
+          "assets/img/projects/videoGames-1.png",
+          "assets/img/projects/videoGames-2.png"
+        ]
       }
     ]
   },
