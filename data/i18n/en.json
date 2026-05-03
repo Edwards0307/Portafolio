@@ -122,7 +122,7 @@
         "description": "Services platform with catalog, shopping cart, Stripe payment gateway, Firebase authentication and admin panel.",
         "tech": ["React", "Node.js", "PostgreSQL", "Firebase", "Stripe"],
         "demo": "https://simpleservice-six.vercel.app/",
-        "github": "https://github.com/Edwards0307",
+        "github": "https://github.com/Edwards0307/simpleservice",
         "images": [
           "assets/img/projects/simpleservice-1.png",
           "assets/img/projects/simpleservice-2.png",
@@ -135,7 +135,7 @@
         "description": "SPA that consumes the RAWG API to explore video games, with filters, sorting and custom game creation.",
         "tech": ["React", "Redux", "Node.js", "PostgreSQL"],
         "demo": "https://pi-videogames-one-lime.vercel.app/",
-        "github": "https://github.com/Edwards0307",
+        "github": "https://github.com/Edwards0307/PI-Videogames",
         "images": [
           "assets/img/projects/videoGames.png",
           "assets/img/projects/videoGames-1.png",
